@@ -3,7 +3,9 @@
 The commented code should be your reference for all details.  To explain the code:
 
 ## 1/ Assemble the source data
-Assemble the source data as described in `ReadMe.md Data Sources` section.  For this implementation, the data source table needs to be a tab-delimited text file.  It is critical the rows of data in this text file are sorted `ORDER BY CustomerID ASC, BasketID ASC, ProductID ASC`
+Assemble the source data.  An example is provided in `SimRole_Build_Input.sqls`.  This example transforms data from [TPC-DS datasets](https://www.tpc.org/tpcds/). The TPC-DS datasets have an appropriate schema: Sales data with stores and products and customers...  However TPC-DS is designed for performance testing; the data is machine (randomly) generated.  Therefore the TPC-DS data is meaningless, so the outputs of running this model on this data will be meaningless.  We are providing example code based on TPC-DS data merely to ensure the code runs.  If anyone knows of a better open data source to use, please let us know!
+
+It is critical the rows of data in this text file are sorted `ORDER BY CustomerID ASC, BasketID ASC, ProductID ASC`
 
 ## 2/ Run the big data processing step
 Run `SimRole.cs`, or your translated version thereof.  Don't worry if you have never seen C#, or never really want to.  No particular fancy programming constructs are used, its just variables, methods, arrays.
